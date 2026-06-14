@@ -1,6 +1,6 @@
 # EMEL-NB: Evolutionary Multi-objective Ensemble Learning using Naive Bayes
 
-This repository contains a clean, GitHub-ready copy of EMEL-NB, the Evolutionary Multi-objective Ensemble Learning approach using Naive Bayes from the research codebase. It keeps only the files needed to run the proposed method and a small demo wrapper for the example dataset `datasets/Musk1.csv`.
+This repository contains a clean, GitHub-ready copy of EMEL-NB, the Evolutionary Multi-objective Ensemble Learning approach using Naive Bayes from the research codebase. It contains a small demo wrapper for the example dataset `datasets/Musk1.csv`.
 
 The method builds an ensemble classifier through iterative multi-objective feature selection. NSGA-II searches for feature subsets, base classifiers are trained on selected features, and a sparse logistic regression model integrates the selected classifier outputs.
 
@@ -43,16 +43,18 @@ The original experiments used Python 3.11. A minimal package set is provided in 
 pip install -r requirements.txt
 ```
 
-On the original local machine, the environment was:
+If you use Conda, create or activate an environment for the project before installing dependencies:
 
-```text
-C:\Users\LADH\anaconda3\envs\run_ensem
+```bash
+conda create -n emel-nb python=3.11
+conda activate emel-nb
+pip install -r requirements.txt
 ```
 
-You can run with that interpreter directly:
+Then run the demo with the active environment's Python interpreter:
 
-```powershell
-C:\Users\LADH\anaconda3\envs\run_ensem\python.exe run_demo.py --help
+```bash
+python run_demo.py --help
 ```
 
 `optimizer/sort.dll` is included for the Windows fast non-dominated sorting path. If the DLL cannot be loaded, the code falls back to the Python sorting implementation.
@@ -93,12 +95,6 @@ These settings can take a long time because they reproduce the manuscript-scale 
 
 From the repository root:
 
-```powershell
-C:\Users\LADH\anaconda3\envs\run_ensem\python.exe run_demo.py --validation-mode cv
-```
-
-Equivalent generic command:
-
 ```bash
 python run_demo.py --validation-mode cv
 ```
@@ -110,12 +106,6 @@ python run_demo.py --validation-mode cv --folds 5
 ```
 
 ## Run Hold-Out Validation
-
-```powershell
-C:\Users\LADH\anaconda3\envs\run_ensem\python.exe run_demo.py --validation-mode holdout
-```
-
-Equivalent generic command:
 
 ```bash
 python run_demo.py --validation-mode holdout
