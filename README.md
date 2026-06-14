@@ -139,8 +139,4 @@ Expected output includes:
 - An aggregated CSV file named like `<timestamp>_<save_info>_Musk1.csv`.
 - When `--save-info-option` is not `none`, detailed run folders under `<timestamp>_<save_info>_Musk1/s<seed>/r<rep>_c<fold>/` containing files such as `params.csv`, `iter_info.csv`, `iter_performance.csv`, and `ensemble_data.csv` according to the selected save option.
 
-## Notes on Code Preservation
 
-The core implementation scripts were copied without modifying the proposed method logic. New or edited files are limited to release-facing files such as `run_demo.py`, `README.md`, `requirements.txt`, and `.gitignore`.
-
-The original project directory was treated as read-only while preparing this GitHub-ready version. No original project files were modified, deleted, renamed, reformatted, or overwritten.
